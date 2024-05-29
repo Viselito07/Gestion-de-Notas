@@ -11,10 +11,10 @@ namespace Entity
     {
         [Identity]
         public int IdDoc { get; set; }
-        public string NombreDocente { get; set; }
-        public string ApellidoDocente { get; set; }
         [PrimaryKey]
         public string DocenteNid { get; set; }
+        public string NombreDocente { get; set; }
+        public string ApellidoDocente { get; set; }
         public string FechaNacDocente { get; set; }
         public string DirDocente { get; set; }
         public string Especialidad { get; set; }

@@ -11,12 +11,13 @@ namespace Entity
     {
         [Identity]
         public int IdEs { get; set; }
-        public string NombreEstudiante { get; set; }
-        public string ApellidoEstudiante { get; set; }
         [PrimaryKey]
         public string EstudianteNid { get; set; }
+        public string NombreEstudiante { get; set; }
+        public string ApellidoEstudiante { get; set; }   
         public string FechNacEstudiante { get; set; }
         public string DirEstudiante {  get; set; }
         public string TelfEstudiante { get; set; }
+        public string EmailEstudiante { get; set; }
     }
 }
