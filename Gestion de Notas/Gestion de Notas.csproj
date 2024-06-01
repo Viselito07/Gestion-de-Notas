@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigConnection.cs" />
+    <Compile Include="FrmDocentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDocentes.Designer.cs">
+      <DependentUpon>FrmDocentes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Estudiante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="VentanaPrincipal.Designer.cs">
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmDocentes.resx">
+      <DependentUpon>FrmDocentes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Estudiante.resx">
       <DependentUpon>frm_Estudiante.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +127,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Docenteicon.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

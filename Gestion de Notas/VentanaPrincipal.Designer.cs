@@ -33,6 +33,7 @@
             this.docenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gradoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(160, 500);
+            this.menuStrip1.Size = new System.Drawing.Size(160, 665);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -56,7 +57,7 @@
             // 
             this.estudianteToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.estudianteToolStripMenuItem.Name = "estudianteToolStripMenuItem";
-            this.estudianteToolStripMenuItem.Size = new System.Drawing.Size(93, 25);
+            this.estudianteToolStripMenuItem.Size = new System.Drawing.Size(139, 25);
             this.estudianteToolStripMenuItem.Text = "Estudiante";
             this.estudianteToolStripMenuItem.Click += new System.EventHandler(this.estudianteToolStripMenuItem_Click);
             // 
@@ -64,33 +65,43 @@
             // 
             this.docenteToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.docenteToolStripMenuItem.Name = "docenteToolStripMenuItem";
-            this.docenteToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
+            this.docenteToolStripMenuItem.Size = new System.Drawing.Size(139, 25);
             this.docenteToolStripMenuItem.Text = "Docente";
+            this.docenteToolStripMenuItem.Click += new System.EventHandler(this.docenteToolStripMenuItem_Click);
             // 
             // materiaToolStripMenuItem
             // 
             this.materiaToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materiaToolStripMenuItem.Name = "materiaToolStripMenuItem";
-            this.materiaToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
+            this.materiaToolStripMenuItem.Size = new System.Drawing.Size(139, 25);
             this.materiaToolStripMenuItem.Text = "Materia";
             // 
             // gradoToolStripMenuItem
             // 
             this.gradoToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradoToolStripMenuItem.Name = "gradoToolStripMenuItem";
-            this.gradoToolStripMenuItem.Size = new System.Drawing.Size(71, 25);
+            this.gradoToolStripMenuItem.Size = new System.Drawing.Size(139, 25);
             this.gradoToolStripMenuItem.Text = "Grado";
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(160, 0);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1512, 665);
+            this.panelContenedor.TabIndex = 1;
             // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(963, 500);
+            this.ClientSize = new System.Drawing.Size(1672, 665);
+            this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Times New Roman", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "VentanaPrincipal";
             this.Text = "VentanaPrincipal";
             this.menuStrip1.ResumeLayout(false);
@@ -107,5 +118,6 @@
         private System.Windows.Forms.ToolStripMenuItem docenteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem materiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gradoToolStripMenuItem;
+        private System.Windows.Forms.Panel panelContenedor;
     }
 }

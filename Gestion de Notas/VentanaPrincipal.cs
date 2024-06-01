@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Gestion_de_Notas
 {
@@ -17,12 +18,38 @@ namespace Gestion_de_Notas
             InitializeComponent();
         }
 
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = panelContenedor.Controls.OfType<MiForm>().FirstOrDefault();
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                panelContenedor.Controls.Add(formulario);
+                panelContenedor.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+
+            else
+            {
+                formulario.BringToFront();
+            }
+
+        }
+
         private void estudianteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_Estudiante ventanaEstudiante = new Frm_Estudiante();
-            this.Hide();
-            ventanaEstudiante.ShowDialog();
+            AbrirFormulario<Frm_Estudiante>();
             
+        }
+
+        private void docenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmDocentes>();
         }
     }
 }

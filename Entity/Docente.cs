@@ -13,9 +13,9 @@ namespace Entity
         public int IdDoc { get; set; }
         [PrimaryKey]
         public string DocenteNid { get; set; }
-        public string NombreDocente { get; set; }
-        public string ApellidoDocente { get; set; }
-        public string FechaNacDocente { get; set; }
+        public string NombresDocente { get; set; }
+        public string ApellidosDocente { get; set; }
+        public DateTime FechaNacDocente { get; set; }
         public string DirDocente { get; set; }
         public string Especialidad { get; set; }
         public string TelfDocente { get; set; }

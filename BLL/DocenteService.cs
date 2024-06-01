@@ -1,42 +1,36 @@
-﻿using System;
+﻿using DAL;
+using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL;
-using Entity;
-using Estructuras;
 
 namespace BLL
 {
-    public class EstudianteService
+    public class DocenteService
     {
         private ConnectionManager conexion;
-        private EstudianteRepository estudianteRepository;
-        List<Estudiante> estudianteLista;
-        Estudiante estudiante;
-        //Email email = new Email();
+        private DocenteRepository docenteRepository;
+        List<Docente> docenteLista;
+        Docente docente;
 
-
-        public EstudianteService(string connectionString)
+        public DocenteService(string connectionString)
         {
             conexion = new ConnectionManager(connectionString);
 
-            estudianteRepository = new EstudianteRepository(conexion);
+            docenteRepository = new DocenteRepository(conexion);
         }
 
-        public string GuardarEstudiante(Estudiante estudiante)
+        public string GuardarDocente(Docente docente)
         {
-            //Email email = new Email();
-            //string mensajeEmail = string.Empty;
+            
             try
             {
                 conexion.Open();
-                estudianteRepository.GuardarEstudiante(estudiante);
-                //mensajeEmail = email.EnviarEmail(estudiante);
-                
+                docenteRepository.GuardarDocente(docente);
 
-                return $"Los datos del estudiante  {estudiante.NombreEstudiante} han sido guardados satiafactoriamente";
+                return $"Los datos del estudiante  {docente.NombresDocente} han sido guardados satiafactoriamente";
             }
             catch (Exception e)
             {
@@ -50,12 +44,12 @@ namespace BLL
         }
 
 
-        public string Eliminar(string identificacion)
+        public string EliminarDocente(string identificacion)
         {
             try
             {
                 conexion.Open();
-                estudianteRepository.Eliminar(identificacion);
+                docenteRepository.EliminarDocente(identificacion);
                 return $"Los datos del cliente han sido eliminados satiafactoriamente";
 
 
@@ -71,13 +65,13 @@ namespace BLL
         }
 
 
-        public string Modificar(Estudiante estudiante)
+        public string ModificarDocente(Docente docente)
 
         {
             try
             {
                 conexion.Open();
-                estudianteRepository.ModificarEstudiante(estudiante);
+                docenteRepository.ModificarDocente(docente);
 
 
                 return "Registro Modificado correctamente";
@@ -95,16 +89,16 @@ namespace BLL
         }
 
 
-        public Estudiante Buscar(string identificacion)
+        public Docente Buscar(string identificacion)
         {
 
             try
             {
                 conexion.Open();
-                estudiante = new Estudiante();
-                estudiante = estudianteRepository.Buscar(identificacion);
+                docente = new Docente();
+                docente = docenteRepository.Buscar(identificacion);
                 conexion.Close();
-                return estudiante;
+                return docente;
             }
             catch (Exception e)
             {
@@ -116,14 +110,14 @@ namespace BLL
         }
 
 
-        public List<Estudiante> Consultar()
+        public List<Docente> Consultar()
         {
             try
             {
-                estudianteLista = new List<Estudiante>();
+                docenteLista = new List<Docente>();
                 conexion.Open();
-                estudianteLista = estudianteRepository.Consultar();
-                return estudianteLista;
+                docenteLista = docenteRepository.Consultar();
+                return docenteLista;
 
             }
             catch (Exception e)
@@ -141,3 +135,4 @@ namespace BLL
         }
     }
 }
+

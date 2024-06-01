@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,6 +19,8 @@ namespace Entity
         public string FechNacEstudiante { get; set; }
         public string DirEstudiante {  get; set; }
         public string TelfEstudiante { get; set; }
-        public string EmailEstudiante { get; set; }
+        //public string EmailEstudiante { get; set; }
+
+        public MailAddress EmailEstudiante { get; set; }
     }
 }

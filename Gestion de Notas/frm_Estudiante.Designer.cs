@@ -33,11 +33,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.lbl_email = new System.Windows.Forms.Label();
-            this.btn_cerrar = new System.Windows.Forms.Button();
-            this.btn_actualizar = new System.Windows.Forms.Button();
-            this.btn_eliminar = new System.Windows.Forms.Button();
-            this.btn_agregar = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_telefono = new System.Windows.Forms.TextBox();
             this.lbl_telefono = new System.Windows.Forms.Label();
             this.txt_direccion = new System.Windows.Forms.TextBox();
             this.lbl_direccion = new System.Windows.Forms.Label();
@@ -50,20 +46,23 @@
             this.txt_nid = new System.Windows.Forms.TextBox();
             this.lbl_nid = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.picboximage1 = new System.Windows.Forms.PictureBox();
             this.lbl_InformacionEstudiante = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btn_buscar = new System.Windows.Forms.Button();
-            this.txt_buscar = new System.Windows.Forms.TextBox();
             this.lbl_buscar = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.btn_cerrar = new System.Windows.Forms.Button();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.picboximage1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picboximage1)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboximage1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -75,7 +74,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1322, 100);
+            this.groupBox1.Size = new System.Drawing.Size(1156, 70);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -83,7 +82,7 @@
             // 
             this.lbl_GestionEstudiante.AutoSize = true;
             this.lbl_GestionEstudiante.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_GestionEstudiante.Location = new System.Drawing.Point(573, 39);
+            this.lbl_GestionEstudiante.Location = new System.Drawing.Point(549, 18);
             this.lbl_GestionEstudiante.Name = "lbl_GestionEstudiante";
             this.lbl_GestionEstudiante.Size = new System.Drawing.Size(233, 32);
             this.lbl_GestionEstudiante.TabIndex = 0;
@@ -98,7 +97,7 @@
             this.groupBox2.Controls.Add(this.btn_actualizar);
             this.groupBox2.Controls.Add(this.btn_eliminar);
             this.groupBox2.Controls.Add(this.btn_agregar);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.txt_telefono);
             this.groupBox2.Controls.Add(this.lbl_telefono);
             this.groupBox2.Controls.Add(this.txt_direccion);
             this.groupBox2.Controls.Add(this.lbl_direccion);
@@ -112,9 +111,9 @@
             this.groupBox2.Controls.Add(this.lbl_nid);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.lbl_InformacionEstudiante);
-            this.groupBox2.Location = new System.Drawing.Point(12, 118);
+            this.groupBox2.Location = new System.Drawing.Point(12, 88);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(388, 522);
+            this.groupBox2.Size = new System.Drawing.Size(388, 552);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -135,49 +134,12 @@
             this.lbl_email.TabIndex = 18;
             this.lbl_email.Text = "Email";
             // 
-            // btn_cerrar
+            // txt_telefono
             // 
-            this.btn_cerrar.Image = global::Gestion_de_Notas.Properties.Resources.cerrar;
-            this.btn_cerrar.Location = new System.Drawing.Point(286, 475);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(65, 31);
-            this.btn_cerrar.TabIndex = 11;
-            this.btn_cerrar.UseVisualStyleBackColor = true;
-            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
-            // 
-            // btn_actualizar
-            // 
-            this.btn_actualizar.Image = global::Gestion_de_Notas.Properties.Resources.update;
-            this.btn_actualizar.Location = new System.Drawing.Point(200, 475);
-            this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(65, 31);
-            this.btn_actualizar.TabIndex = 10;
-            this.btn_actualizar.UseVisualStyleBackColor = true;
-            // 
-            // btn_eliminar
-            // 
-            this.btn_eliminar.Image = global::Gestion_de_Notas.Properties.Resources.eliminar;
-            this.btn_eliminar.Location = new System.Drawing.Point(109, 475);
-            this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(65, 31);
-            this.btn_eliminar.TabIndex = 9;
-            this.btn_eliminar.UseVisualStyleBackColor = true;
-            // 
-            // btn_agregar
-            // 
-            this.btn_agregar.Image = global::Gestion_de_Notas.Properties.Resources.agregar;
-            this.btn_agregar.Location = new System.Drawing.Point(23, 475);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(65, 31);
-            this.btn_agregar.TabIndex = 8;
-            this.btn_agregar.UseVisualStyleBackColor = true;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(200, 377);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(151, 22);
-            this.textBox5.TabIndex = 6;
+            this.txt_telefono.Location = new System.Drawing.Point(200, 377);
+            this.txt_telefono.Name = "txt_telefono";
+            this.txt_telefono.Size = new System.Drawing.Size(151, 22);
+            this.txt_telefono.TabIndex = 6;
             // 
             // lbl_telefono
             // 
@@ -283,16 +245,6 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             // 
-            // picboximage1
-            // 
-            this.picboximage1.Image = global::Gestion_de_Notas.Properties.Resources.estudianteicon;
-            this.picboximage1.Location = new System.Drawing.Point(18, 21);
-            this.picboximage1.Name = "picboximage1";
-            this.picboximage1.Size = new System.Drawing.Size(165, 118);
-            this.picboximage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboximage1.TabIndex = 2;
-            this.picboximage1.TabStop = false;
-            // 
             // lbl_InformacionEstudiante
             // 
             this.lbl_InformacionEstudiante.AutoSize = true;
@@ -309,33 +261,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox4.Controls.Add(this.btn_buscar);
-            this.groupBox4.Controls.Add(this.txt_buscar);
             this.groupBox4.Controls.Add(this.lbl_buscar);
             this.groupBox4.Controls.Add(this.dataGridView1);
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Location = new System.Drawing.Point(406, 118);
+            this.groupBox4.Location = new System.Drawing.Point(406, 88);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(928, 522);
+            this.groupBox4.Size = new System.Drawing.Size(762, 552);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.Image = global::Gestion_de_Notas.Properties.Resources.search;
-            this.btn_buscar.Location = new System.Drawing.Point(243, 444);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(42, 42);
-            this.btn_buscar.TabIndex = 4;
-            this.btn_buscar.UseVisualStyleBackColor = true;
-            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
-            // 
-            // txt_buscar
-            // 
-            this.txt_buscar.Location = new System.Drawing.Point(86, 454);
-            this.txt_buscar.Multiline = true;
-            this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(151, 22);
-            this.txt_buscar.TabIndex = 3;
             // 
             // lbl_buscar
             // 
@@ -368,11 +301,71 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Lista De Estudiantes";
             // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Image = global::Gestion_de_Notas.Properties.Resources.search;
+            this.btn_buscar.Location = new System.Drawing.Point(77, 444);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(42, 42);
+            this.btn_buscar.TabIndex = 4;
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.Image = global::Gestion_de_Notas.Properties.Resources.cerrar;
+            this.btn_cerrar.Location = new System.Drawing.Point(286, 475);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(65, 31);
+            this.btn_cerrar.TabIndex = 11;
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
+            // btn_actualizar
+            // 
+            this.btn_actualizar.Image = global::Gestion_de_Notas.Properties.Resources.update;
+            this.btn_actualizar.Location = new System.Drawing.Point(200, 475);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(65, 31);
+            this.btn_actualizar.TabIndex = 10;
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
+            // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.Image = global::Gestion_de_Notas.Properties.Resources.eliminar;
+            this.btn_eliminar.Location = new System.Drawing.Point(109, 475);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(65, 31);
+            this.btn_eliminar.TabIndex = 9;
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.Image = global::Gestion_de_Notas.Properties.Resources.agregar;
+            this.btn_agregar.Location = new System.Drawing.Point(23, 475);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(65, 31);
+            this.btn_agregar.TabIndex = 8;
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
+            // 
+            // picboximage1
+            // 
+            this.picboximage1.Image = global::Gestion_de_Notas.Properties.Resources.estudianteicon;
+            this.picboximage1.Location = new System.Drawing.Point(18, 21);
+            this.picboximage1.Name = "picboximage1";
+            this.picboximage1.Size = new System.Drawing.Size(165, 118);
+            this.picboximage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboximage1.TabIndex = 2;
+            this.picboximage1.TabStop = false;
+            // 
             // Frm_Estudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1346, 652);
+            this.ClientSize = new System.Drawing.Size(1180, 619);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -383,10 +376,10 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picboximage1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboximage1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -401,7 +394,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.PictureBox picboximage1;
         private System.Windows.Forms.Label lbl_InformacionEstudiante;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_telefono;
         private System.Windows.Forms.Label lbl_telefono;
         private System.Windows.Forms.TextBox txt_direccion;
         private System.Windows.Forms.Label lbl_direccion;
@@ -421,7 +414,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_buscar;
-        private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.Label lbl_buscar;
     }
 }

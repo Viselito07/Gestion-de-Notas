@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D0E208D-1DE9-49B0-B02D-9E1D6856D208}</ProjectGuid>
+    <ProjectGuid>{4025B625-65D3-46E2-9D1C-E5ACF20D44FD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BLL</RootNamespace>
-    <AssemblyName>BLL</AssemblyName>
+    <RootNamespace>Estructuras</RootNamespace>
+    <AssemblyName>Estructuras</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,22 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DocenteService.cs" />
-    <Compile Include="EstudianteService.cs" />
+    <Compile Include="Email.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{0182cf47-99a3-44ba-b6df-87f75dc2580f}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{cc99c962-8ed3-4e7b-8a3c-eb56358cc436}</Project>
       <Name>Entity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Estructuras\Estructuras.csproj">
-      <Project>{4025b625-65d3-46e2-9d1c-e5acf20d44fd}</Project>
-      <Name>Estructuras</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

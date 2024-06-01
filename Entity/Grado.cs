@@ -12,5 +12,6 @@ namespace Entity
         [PrimaryKey, Identity]
         public int IdG { get; set; }
         public string Nombre { get; set; }
+
     }
 }
