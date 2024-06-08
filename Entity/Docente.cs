@@ -22,6 +22,6 @@ namespace Entity
         public string DirDocente { get; set; }
         public string Especialidad { get; set; }
         public string TelfDocente { get; set; }
-        public string NombreDocente { get;set; }
+        
     }
 }
