@@ -9,6 +9,9 @@ namespace Entity
 {
     public class Docente
     {
+               /// <summary>
+               /// hola mundo
+               /// </summary>
         [Identity]
         public int IdDoc { get; set; }
         [PrimaryKey]
@@ -19,5 +22,6 @@ namespace Entity
         public string DirDocente { get; set; }
         public string Especialidad { get; set; }
         public string TelfDocente { get; set; }
+        
     }
 }
