@@ -51,5 +51,20 @@ namespace Gestion_de_Notas
         {
             AbrirFormulario<FrmDocentes>();
         }
+
+        private void gradoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmGrado>();
+        }
+
+        private void materiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmMateria>();
+        }
+
+        private void btn_cerrarV_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

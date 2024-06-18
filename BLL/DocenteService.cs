@@ -30,7 +30,7 @@ namespace BLL
                 conexion.Open();
                 docenteRepository.GuardarDocente(docente);
 
-                return $"Los datos del estudiante  {docente.NombresDocente} han sido guardados satiafactoriamente";
+                return $"Los datos del Docente  {docente.NombresDocente} han sido guardados satiafactoriamente";
             }
             catch (Exception e)
             {
@@ -50,7 +50,7 @@ namespace BLL
             {
                 conexion.Open();
                 docenteRepository.EliminarDocente(identificacion);
-                return $"Los datos del cliente han sido eliminados satiafactoriamente";
+                return $"Los datos del Docente han sido eliminados satiafactoriamente";
 
 
             }

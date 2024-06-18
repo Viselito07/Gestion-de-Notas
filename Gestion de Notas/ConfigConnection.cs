@@ -10,5 +10,6 @@ namespace Gestion_de_Notas
     public static class ConfigConnection
     {
         public static string connectionString = ConfigurationManager.ConnectionStrings["Notas"].ConnectionString;
+        //public static string connectionString = ConfigurationManager.ConnectionStrings["secayo"].ConnectionString;
     }
 }

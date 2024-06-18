@@ -31,13 +31,17 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbl_GestionEstudiante = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dtp_fechNacE = new System.Windows.Forms.DateTimePicker();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.lbl_email = new System.Windows.Forms.Label();
+            this.btn_cerrar = new System.Windows.Forms.Button();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
+            this.btn_agregar = new System.Windows.Forms.Button();
             this.txt_telefono = new System.Windows.Forms.TextBox();
             this.lbl_telefono = new System.Windows.Forms.Label();
             this.txt_direccion = new System.Windows.Forms.TextBox();
             this.lbl_direccion = new System.Windows.Forms.Label();
-            this.txt_fechaNaci = new System.Windows.Forms.TextBox();
             this.lbl_fechNaci = new System.Windows.Forms.Label();
             this.txt_apellido = new System.Windows.Forms.TextBox();
             this.lbl_apellido = new System.Windows.Forms.Label();
@@ -46,23 +50,19 @@
             this.txt_nid = new System.Windows.Forms.TextBox();
             this.lbl_nid = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.picboximage1 = new System.Windows.Forms.PictureBox();
             this.lbl_InformacionEstudiante = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btn_buscar = new System.Windows.Forms.Button();
             this.lbl_buscar = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_buscar = new System.Windows.Forms.Button();
-            this.btn_cerrar = new System.Windows.Forms.Button();
-            this.btn_actualizar = new System.Windows.Forms.Button();
-            this.btn_eliminar = new System.Windows.Forms.Button();
-            this.btn_agregar = new System.Windows.Forms.Button();
-            this.picboximage1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboximage1)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboximage1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -91,6 +91,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.PaleGreen;
+            this.groupBox2.Controls.Add(this.dtp_fechNacE);
             this.groupBox2.Controls.Add(this.txt_email);
             this.groupBox2.Controls.Add(this.lbl_email);
             this.groupBox2.Controls.Add(this.btn_cerrar);
@@ -101,7 +102,6 @@
             this.groupBox2.Controls.Add(this.lbl_telefono);
             this.groupBox2.Controls.Add(this.txt_direccion);
             this.groupBox2.Controls.Add(this.lbl_direccion);
-            this.groupBox2.Controls.Add(this.txt_fechaNaci);
             this.groupBox2.Controls.Add(this.lbl_fechNaci);
             this.groupBox2.Controls.Add(this.txt_apellido);
             this.groupBox2.Controls.Add(this.lbl_apellido);
@@ -116,6 +116,14 @@
             this.groupBox2.Size = new System.Drawing.Size(388, 552);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // dtp_fechNacE
+            // 
+            this.dtp_fechNacE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_fechNacE.Location = new System.Drawing.Point(200, 255);
+            this.dtp_fechNacE.Name = "dtp_fechNacE";
+            this.dtp_fechNacE.Size = new System.Drawing.Size(151, 22);
+            this.dtp_fechNacE.TabIndex = 5;
             // 
             // txt_email
             // 
@@ -133,6 +141,46 @@
             this.lbl_email.Size = new System.Drawing.Size(52, 20);
             this.lbl_email.TabIndex = 18;
             this.lbl_email.Text = "Email";
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.Image = global::Gestion_de_Notas.Properties.Resources.cerrar;
+            this.btn_cerrar.Location = new System.Drawing.Point(286, 475);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(65, 31);
+            this.btn_cerrar.TabIndex = 11;
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
+            // btn_actualizar
+            // 
+            this.btn_actualizar.Image = global::Gestion_de_Notas.Properties.Resources.update;
+            this.btn_actualizar.Location = new System.Drawing.Point(200, 475);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(65, 31);
+            this.btn_actualizar.TabIndex = 10;
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
+            // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.Image = global::Gestion_de_Notas.Properties.Resources.eliminar;
+            this.btn_eliminar.Location = new System.Drawing.Point(109, 475);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(65, 31);
+            this.btn_eliminar.TabIndex = 9;
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.Image = global::Gestion_de_Notas.Properties.Resources.agregar;
+            this.btn_agregar.Location = new System.Drawing.Point(23, 475);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(65, 31);
+            this.btn_agregar.TabIndex = 8;
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // txt_telefono
             // 
@@ -167,13 +215,6 @@
             this.lbl_direccion.Size = new System.Drawing.Size(79, 20);
             this.lbl_direccion.TabIndex = 10;
             this.lbl_direccion.Text = "Direccion";
-            // 
-            // txt_fechaNaci
-            // 
-            this.txt_fechaNaci.Location = new System.Drawing.Point(200, 255);
-            this.txt_fechaNaci.Name = "txt_fechaNaci";
-            this.txt_fechaNaci.Size = new System.Drawing.Size(151, 22);
-            this.txt_fechaNaci.TabIndex = 4;
             // 
             // lbl_fechNaci
             // 
@@ -245,6 +286,16 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             // 
+            // picboximage1
+            // 
+            this.picboximage1.Image = global::Gestion_de_Notas.Properties.Resources.estudianteicon;
+            this.picboximage1.Location = new System.Drawing.Point(18, 21);
+            this.picboximage1.Name = "picboximage1";
+            this.picboximage1.Size = new System.Drawing.Size(165, 118);
+            this.picboximage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboximage1.TabIndex = 2;
+            this.picboximage1.TabStop = false;
+            // 
             // lbl_InformacionEstudiante
             // 
             this.lbl_InformacionEstudiante.AutoSize = true;
@@ -269,6 +320,16 @@
             this.groupBox4.Size = new System.Drawing.Size(762, 552);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Image = global::Gestion_de_Notas.Properties.Resources.search;
+            this.btn_buscar.Location = new System.Drawing.Point(77, 444);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(65, 31);
+            this.btn_buscar.TabIndex = 4;
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // lbl_buscar
             // 
@@ -301,66 +362,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Lista De Estudiantes";
             // 
-            // btn_buscar
-            // 
-            this.btn_buscar.Image = global::Gestion_de_Notas.Properties.Resources.search;
-            this.btn_buscar.Location = new System.Drawing.Point(77, 444);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(42, 42);
-            this.btn_buscar.TabIndex = 4;
-            this.btn_buscar.UseVisualStyleBackColor = true;
-            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
-            // 
-            // btn_cerrar
-            // 
-            this.btn_cerrar.Image = global::Gestion_de_Notas.Properties.Resources.cerrar;
-            this.btn_cerrar.Location = new System.Drawing.Point(286, 475);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(65, 31);
-            this.btn_cerrar.TabIndex = 11;
-            this.btn_cerrar.UseVisualStyleBackColor = true;
-            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
-            // 
-            // btn_actualizar
-            // 
-            this.btn_actualizar.Image = global::Gestion_de_Notas.Properties.Resources.update;
-            this.btn_actualizar.Location = new System.Drawing.Point(200, 475);
-            this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(65, 31);
-            this.btn_actualizar.TabIndex = 10;
-            this.btn_actualizar.UseVisualStyleBackColor = true;
-            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
-            // 
-            // btn_eliminar
-            // 
-            this.btn_eliminar.Image = global::Gestion_de_Notas.Properties.Resources.eliminar;
-            this.btn_eliminar.Location = new System.Drawing.Point(109, 475);
-            this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(65, 31);
-            this.btn_eliminar.TabIndex = 9;
-            this.btn_eliminar.UseVisualStyleBackColor = true;
-            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
-            // 
-            // btn_agregar
-            // 
-            this.btn_agregar.Image = global::Gestion_de_Notas.Properties.Resources.agregar;
-            this.btn_agregar.Location = new System.Drawing.Point(23, 475);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(65, 31);
-            this.btn_agregar.TabIndex = 8;
-            this.btn_agregar.UseVisualStyleBackColor = true;
-            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
-            // 
-            // picboximage1
-            // 
-            this.picboximage1.Image = global::Gestion_de_Notas.Properties.Resources.estudianteicon;
-            this.picboximage1.Location = new System.Drawing.Point(18, 21);
-            this.picboximage1.Name = "picboximage1";
-            this.picboximage1.Size = new System.Drawing.Size(165, 118);
-            this.picboximage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboximage1.TabIndex = 2;
-            this.picboximage1.TabStop = false;
-            // 
             // Frm_Estudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -376,10 +377,10 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picboximage1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboximage1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -398,7 +399,6 @@
         private System.Windows.Forms.Label lbl_telefono;
         private System.Windows.Forms.TextBox txt_direccion;
         private System.Windows.Forms.Label lbl_direccion;
-        private System.Windows.Forms.TextBox txt_fechaNaci;
         private System.Windows.Forms.Label lbl_fechNaci;
         private System.Windows.Forms.TextBox txt_apellido;
         private System.Windows.Forms.Label lbl_apellido;
@@ -415,5 +415,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Label lbl_buscar;
+        private System.Windows.Forms.DateTimePicker dtp_fechNacE;
     }
 }

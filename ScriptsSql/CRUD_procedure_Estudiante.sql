@@ -13,7 +13,7 @@ GO
 -- ==============================================================================================================================
 
 
-ALTER PROCEDURE [dbo].[SP_CRUD_ESTUDIANTE]
+CREATE PROCEDURE [dbo].[SP_CRUD_ESTUDIANTE]
 (
 	@intProceso				        INT,
 	@IdEs							INT = NULL,

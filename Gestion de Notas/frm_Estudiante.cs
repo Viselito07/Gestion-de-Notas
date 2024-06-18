@@ -43,7 +43,7 @@ namespace Gestion_de_Notas
             estudiante.EstudianteNid = txt_nid.Text;
             estudiante.NombreEstudiante = txt_nombre.Text;
             estudiante.ApellidoEstudiante = txt_apellido.Text;
-            estudiante.FechNacEstudiante = txt_fechaNaci.Text;
+            estudiante.FechNacEstudiante = Convert.ToDateTime(dtp_fechNacE.Text.ToString());
             estudiante.DirEstudiante = txt_direccion.Text;
             estudiante.TelfEstudiante = txt_telefono.Text;
             //estudiante.EmailEstudiante = (txt_email.Text);
@@ -61,7 +61,7 @@ namespace Gestion_de_Notas
             txt_nid.Text = "";
             txt_nombre.Text = "";
             txt_apellido.Text = "";
-            txt_fechaNaci.Text = "";
+            dtp_fechNacE.Text = "";
             txt_direccion.Text = "";
             txt_telefono.Text = "";
             txt_email.Text = "";
@@ -76,7 +76,7 @@ namespace Gestion_de_Notas
                 Estudiante estudiante = estudianteService.Buscar(identificacion);
                 if (estudiante != null)
                 {
-                    var respuestaa = MessageBox.Show("Esta seguro que desea eliminar esta persona?", "", MessageBoxButtons.YesNo);
+                    var respuestaa = MessageBox.Show("Esta seguro que desea eliminar?", " ", MessageBoxButtons.YesNo);
                     if (respuestaa == DialogResult.Yes)
                     {
                         string mensaje = estudianteService.Eliminar(identificacion);
@@ -110,7 +110,7 @@ namespace Gestion_de_Notas
                 {
                     estudiante.NombreEstudiante = txt_nombre.Text;
                     estudiante.ApellidoEstudiante = txt_apellido.Text;
-                    estudiante.FechNacEstudiante = txt_fechaNaci.Text;
+                    estudiante.FechNacEstudiante = Convert.ToDateTime(dtp_fechNacE.Text.ToString());
                     estudiante.DirEstudiante = txt_direccion.Text;
                     estudiante.TelfEstudiante = txt_telefono.Text;                   
                     estudiante.EmailEstudiante = new MailAddress(txt_email.Text.ToString());

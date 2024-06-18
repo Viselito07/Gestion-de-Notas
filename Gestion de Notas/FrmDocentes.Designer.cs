@@ -361,7 +361,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(841, 296);
+            this.dataGridView1.Size = new System.Drawing.Size(889, 296);
             this.dataGridView1.TabIndex = 0;
             // 
             // FrmDocentes

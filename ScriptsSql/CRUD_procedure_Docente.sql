@@ -60,7 +60,6 @@ BEGIN
        BEGIN TRANSACTION
 			INSERT INTO [Elvis_NotasDB].[dbo].[Docente]
 			(
-				IdDoc,
 				DocenteNid,
 				NombresDocente,
 				ApellidosDocente,
@@ -71,7 +70,6 @@ BEGIN
 			)
 			VALUES
 			(
-                @IdDoc,
 				@DocenteNid,
 				@NombresDocente,
 				@ApellidosDocente,
@@ -118,5 +116,11 @@ BEGIN
 				[TelfDocente]
 			FROM [Elvis_NotasDB].[dbo].[Docente] WITH(NOLOCK)
 			WHERE DocenteNid = @DocenteNid
+    END
+
+	--5 CONSULTAR 
+	IF @intProceso = 6
+		BEGIN
+			SELECT d.NombresDocente, m.NombreM FROM [Elvis_NotasDB].[dbo].[Materia] m INNER JOIN Docente d ON m.DocenteNid = d.DocenteNid 
     END
 END

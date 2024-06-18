@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Security.Permissions;
 using System.Text;
@@ -14,5 +15,11 @@ namespace Entity
         [PrimaryKey, Identity]
         public int IdM { get; set; }
         public string Nombre { get; set; }
+
+        [ForeignKey("Docente")]
+        public string DocenteNid { get; set; }
+
+        [ForeignKey("Grado")]
+        public int Idg { get; set; }
     }
 }

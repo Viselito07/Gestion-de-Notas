@@ -144,7 +144,7 @@ namespace DAL
             estudiante.EstudianteNid = (string)reader["EstudianteNid"];
             estudiante.NombreEstudiante = (string)reader["NombreEstudiante"];
             estudiante.ApellidoEstudiante = (string)reader["ApellidoEstudiante"];
-            estudiante.FechNacEstudiante = (string)reader["FechNacEstudiante"];
+            estudiante.FechNacEstudiante = Convert.ToDateTime((string)reader["FechNacEstudiante"]);
             estudiante.DirEstudiante = (string)reader["DirEstudiante"];
             estudiante.TelfEstudiante = (string)reader["TelfEstudiante"];
             //estudiante.EmailEstudiante = (string)reader["EmailEstudiante"];

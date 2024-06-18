@@ -11,7 +11,7 @@ namespace Entity
     {
         [PrimaryKey, Identity]
         public int IdG { get; set; }
-        public string Nombre { get; set; }
+        public string NombreG { get; set; }
 
     }
 }

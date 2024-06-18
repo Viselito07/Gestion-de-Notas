@@ -1,42 +1,41 @@
-﻿using System;
+﻿using DAL;
+using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL;
-using Entity;
-using Estructuras;
 
 namespace BLL
 {
-    public class EstudianteService
+    public class GradoService
     {
         private ConnectionManager conexion;
-        private EstudianteRepository estudianteRepository;
-        List<Estudiante> estudianteLista;
-        Estudiante estudiante;
-        //Email email = new Email();
+        private GradoRepository gradoRepository;
+        List<Grado> gradolista;
+        Grado grado;
 
-
-        public EstudianteService(string connectionString)
+        public GradoService(string connectionString) 
         {
             conexion = new ConnectionManager(connectionString);
-
-            estudianteRepository = new EstudianteRepository(conexion);
+            gradoRepository = new GradoRepository(conexion);
         }
 
-        public string GuardarEstudiante(Estudiante estudiante)
+
+        public string GuardarGrado(Grado grado)
         {
-            //Email email = new Email();
-            //string mensajeEmail = string.Empty;
+
             try
             {
                 conexion.Open();
-                estudianteRepository.GuardarEstudiante(estudiante);
-                //mensajeEmail = email.EnviarEmail(estudiante);
-                
+                bool validarnombregrado = gradoRepository.ValidarNombreGrado(grado.NombreG);
+                if (validarnombregrado)
+                {
+                    return $"Los datos del Grado  {grado.NombreG} ya se encuentra registrado";
+                }
+                gradoRepository.GuardarGrado(grado);
 
-                return $"Los datos del estudiante  {estudiante.NombreEstudiante} han sido guardados satiafactoriamente";
+                return $"Los datos del Grado  {grado.NombreG} han sido guardados satiafactoriamente";
             }
             catch (Exception e)
             {
@@ -50,34 +49,33 @@ namespace BLL
         }
 
 
-        public string Eliminar(string identificacion)
+        public string EliminarGrado(string id)
         {
+
             try
             {
                 conexion.Open();
-                estudianteRepository.Eliminar(identificacion);
-                return $"Los datos del cliente han sido eliminados satiafactoriamente";
+                gradoRepository.EliminarGrado(id);
 
-
+                return $"Los datos han sido eliminados satiafactoriamente";
             }
             catch (Exception e)
             {
-                return $"Error de la aplicacion: {e.Message}";
+                return $"Error de base de datos: {e.Message}";
             }
             finally
             {
                 conexion.Close();
             }
+
         }
 
-
-        public string Modificar(Estudiante estudiante)
-
+        public string Modificargrado(Grado grado)
         {
             try
             {
                 conexion.Open();
-                estudianteRepository.ModificarEstudiante(estudiante);
+                gradoRepository.ModificarGrado(grado);
 
 
                 return "Registro Modificado correctamente";
@@ -95,16 +93,16 @@ namespace BLL
         }
 
 
-        public Estudiante Buscar(string identificacion)
+        public Grado Buscar(string id)
         {
 
             try
             {
                 conexion.Open();
-                estudiante = new Estudiante();
-                estudiante = estudianteRepository.Buscar(identificacion);
+                grado = new Grado();
+                grado = gradoRepository.Buscar(id);
                 conexion.Close();
-                return estudiante;
+                return grado;
             }
             catch (Exception e)
             {
@@ -116,20 +114,21 @@ namespace BLL
         }
 
 
-        public List<Estudiante> Consultar()
+        public List<Grado> Consultar()
         {
             try
             {
-                estudianteLista = new List<Estudiante>();
+                gradolista = new List<Grado>();
                 conexion.Open();
-                estudianteLista = estudianteRepository.Consultar();
-                return estudianteLista;
+                gradolista = gradoRepository.Consultar();
+                return gradolista;
 
             }
             catch (Exception e)
             {
 
                 string Mensaje = $"error de datos" + e.Message.ToString();
+
 
             }
             finally
@@ -138,5 +137,6 @@ namespace BLL
             }
             return null;
         }
+
     }
 }
